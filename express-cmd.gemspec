@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["wluo"]
   spec.email         = ["luowei---010101@163.com"]
 
-  spec.summary       = %q{Command for generating sinatra project}
-  spec.description   = %q{Generate a sinatra project.}
+  spec.summary       = %q{Command for generating express project}
+  spec.description   = %q{Generate a express project.}
   spec.homepage      = "https://github.com/hilotus/express-cmd"
   spec.license       = "MIT"
 
