@@ -18,6 +18,8 @@ module ExpressCmd
 
     def setup_config
       keep_file "#{app_name}/config"
+      copy_file "config/mongo.js", "#{app_name}/config/mongo.js"
+      copy_file "config/mongo.yml", "#{app_name}/config/mongo.yml"
     end
 
     def setup_middleware

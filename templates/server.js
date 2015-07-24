@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var cookieParser = require('cookie-parser');
 
+// mongo connect
+var mongo = require('./config/mongo');
 var logger = require('./lib/logger');
 
 // MiddleWare
@@ -40,6 +42,8 @@ app.use('/api', apiRouter);
 
 app.listen(app.get('port'), function() {
   logger.info('Server started, listened on ' + app.get('port') + '.');
+  // connect with mongodb.
+  mongo.connect(app.get('env'));
 });
 
 module.exports = app;

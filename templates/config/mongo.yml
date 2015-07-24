@@ -1,0 +1,23 @@
+development:
+  host: localhost
+  port: 27017
+  database: demo-dev
+
+test:
+  host: localhost
+  port: 27017
+  database: demo-test
+
+production:
+  host: <%= process.env.MONGO_HOST %>
+  port: <%= process.env.MONGO_PORT %>
+  database: <%=process.env.MONGO_DBNAME %>
+  username: <%= process.env.MONGO_USERNAME %>
+  password: <%= process.env.MONGO_PASSWORD %>
+
+staging:
+  host: <%= process.env.MONGO_HOST %>
+  port: <%= process.env.MONGO_PORT %>
+  database: <%= process.env.MONGO_DBNAME %>
+  username: <%= process.env.MONGO_USERNAME %>
+  password: <%= process.env.MONGO_PASSWORD %>
