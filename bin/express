@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "express_cmd"
+
+ExpressCmd::Generator.start(ARGV)
