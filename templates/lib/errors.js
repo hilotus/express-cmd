@@ -20,7 +20,7 @@ var AuthError = (function (superClass) {
 
   function AuthError(message) {
     this.status = 401;
-    this.message = message || i18n.t('errorHandling.authRequired');
+    this.message = message || i18n.t('errorHandling.unAuthorization');
     AuthError.__super__.constructor.call(this, this.message);
   }
 

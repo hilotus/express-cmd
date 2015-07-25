@@ -1,7 +1,7 @@
 {
   "errorHandling": {
     "badRequest": "Invalid request data",
-    "authRequired": "Authorization required",
+    "unAuthorization": "Unauthorization",
     "forbidden": "Forbidden",
     "notFound": "Not found",
     "internalServerError": "Internal server error",
