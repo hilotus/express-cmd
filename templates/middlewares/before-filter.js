@@ -13,7 +13,8 @@ module.exports = function(app) {
     if ('OPTIONS' === req.method || req.path === '/favicon.ico') {
       return res.status(204).end();
     }
-    // TODO: write your auth logic.
+
+    // TODO: You can write your auth logic.
     if (!req.get('X-Access-Token')) {
       return next(new AuthError());
     } else {

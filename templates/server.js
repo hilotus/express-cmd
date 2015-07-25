@@ -17,6 +17,8 @@ app.use(cookieParser());
 app.set('port', process.env.PORT || 9292);
 app.set('env', process.env.NODE_ENV || 'development');
 
+// I18n
+require('./middlewares/i18n')(app);
 // Before Filter
 require('./middlewares/before-filter')(app);
 // Access Log

@@ -1,0 +1,12 @@
+{
+  "errorHandling": {
+    "badRequest": "错误的请求",
+    "authRequired": "验证失败",
+    "forbidden": "未授权",
+    "notFound": "未找到",
+    "internalServerError": "内部错误",
+    "multiJson": {
+      "decode": "解析JSON出错"
+    }
+  }
+}

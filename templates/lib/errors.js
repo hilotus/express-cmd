@@ -1,3 +1,5 @@
+var i18n = require('../config/i18n');
+
 var hasProp = {}.hasOwnProperty;
 var extend = function (child, parent) {
   for (var key in parent) {
@@ -18,7 +20,7 @@ var AuthError = (function (superClass) {
 
   function AuthError(message) {
     this.status = 401;
-    this.message = 'Unauthorized';
+    this.message = message || i18n.t('errorHandling.authRequired');
     AuthError.__super__.constructor.call(this, this.message);
   }
 
@@ -30,7 +32,7 @@ var ReqError = (function (superClass) {
 
   function ReqError(message) {
     this.status = 400;
-    this.message = 'Invalid request data';
+    this.message = message || i18n.t('errorHandling.badRequest');
     ReqError.__super__.constructor.call(this, this.message);
   }
 

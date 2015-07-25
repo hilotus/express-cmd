@@ -1,0 +1,12 @@
+{
+  "errorHandling": {
+    "badRequest": "Invalid request data",
+    "authRequired": "Authorization required",
+    "forbidden": "Forbidden",
+    "notFound": "Not found",
+    "internalServerError": "Internal server error",
+    "multiJson": {
+      "decode": "Problems parsing JSON"
+    }
+  }
+}

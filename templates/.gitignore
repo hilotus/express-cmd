@@ -2,7 +2,5 @@
 /.idea
 /node_modules
 /log
-/test/reporter/*.xml
+/test/reporter
 .npm-debug.log
-
-/*.gem
