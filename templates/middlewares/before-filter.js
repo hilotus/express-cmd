@@ -1,7 +1,7 @@
 var AuthError = require('../lib/errors').AuthError;
 
 module.exports = function(app) {
-  return app.use(function(req, res, next) {
+  return app.use(function (req, res, next) {
     var origin = req.get('origin');
     if (origin) {
       res.header('Access-Control-Allow-Origin', origin);

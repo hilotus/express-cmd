@@ -2,7 +2,7 @@ var morgan = require('morgan');
 var path = require('path');
 var fs = require('fs');
 
-module.exports = function(app) {
+module.exports = function (app) {
   var accessLogStream, env, logDirectory;
 
   logDirectory = path.join(__dirname, '../log');

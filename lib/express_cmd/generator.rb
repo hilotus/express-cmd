@@ -5,6 +5,7 @@ module ExpressCmd
     include Thor::Actions
 
     argument :app_name
+    class_option :skip_npm_install, :type => :boolean
 
     def self.source_root
       File.join(File.dirname(__FILE__), "../../", "templates")
@@ -54,7 +55,9 @@ module ExpressCmd
     end
 
     def bundle_install
-      system "cd #{app_name} && npm install && cd ../"
+      unless options[:skip_npm_install]
+        system "cd #{app_name} && npm install && cd ../"
+      end
     end
 
     protected

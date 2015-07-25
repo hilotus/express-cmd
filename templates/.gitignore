@@ -4,3 +4,5 @@
 /log
 /test/reporter/*.xml
 .npm-debug.log
+
+/*.gem

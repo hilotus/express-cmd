@@ -20,15 +20,16 @@ Or install it yourself as:
 
 I choose `mongodb` as my datastore, and I perfer to use `mongoose`.
 
+1. make sure you have installed node-inspector (debug tool) and nodemon (node auto reload after saved).
+
 ```bash
-# make sure you have installed node-inspector (debug tool) and nodemon (node auto reload after saved).
 npm install -g node-inspector
 npm install -g nodemon
-
-gem install express-cmd
-
-express project-name
 ```
+
+2. `express app_name`, and you can specify an option, for example `express my-project --skip_npm_install`.
+
+**supported options**: `--skip_npm_install`.
 
 ## Test
 

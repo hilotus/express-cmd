@@ -1,5 +1,5 @@
 var hasProp = {}.hasOwnProperty;
-var extend = function(child, parent) {
+var extend = function (child, parent) {
   for (var key in parent) {
     if (hasProp.call(parent, key))
       child[key] = parent[key];
@@ -13,7 +13,7 @@ var extend = function(child, parent) {
   return child;
 };
 
-var AuthError = (function(superClass) {
+var AuthError = (function (superClass) {
   extend(AuthError, superClass);
 
   function AuthError(message) {
@@ -25,7 +25,7 @@ var AuthError = (function(superClass) {
   return AuthError;
 })(Error);
 
-var ReqError = (function(superClass) {
+var ReqError = (function (superClass) {
   extend(ReqError, superClass);
 
   function ReqError(message) {

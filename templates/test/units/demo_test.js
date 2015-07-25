@@ -1,5 +1,5 @@
-describe('Demo Test', function(){
-  it("#Chai should sample example", function(done) {
+describe('Demo Test', function () {
+  it("#Chai should sample example", function (done) {
     var user = {
       name: 'tj',
       pets: ['tobi', 'loki', 'jane', 'bandit']

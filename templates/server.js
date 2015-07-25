@@ -19,28 +19,29 @@ app.set('env', process.env.NODE_ENV || 'development');
 
 // Before Filter
 require('./middlewares/before-filter')(app);
-// Error handler
-require('./middlewares/error-handler')(app);
 // Access Log
 require('./middlewares/morgan-log')(app);
 
 // Routes Example
-var apiRouter = express.Router();
+var rootRouter = express.Router();
 var instanceRouter = express.Router();
 var configurationRouter = express.Router({ mergeParams: true });
 var translationRouter = express.Router({ mergeParams: true });
 
 instanceRouter.use('/:hostname/configurations', configurationRouter);
 instanceRouter.use('/:hostname/translations', translationRouter);
-apiRouter.use('/instances', instanceRouter);
+rootRouter.use('/instances', instanceRouter);
 
 require('./routes/configuration')(configurationRouter);
 require('./routes/translation')(translationRouter);
 require('./routes/instance')(instanceRouter);
 
-app.use('/api', apiRouter);
+app.use('/1', rootRouter);
 
-app.listen(app.get('port'), function() {
+// Error handler (should be here)
+require('./middlewares/error-handler')(app);
+
+app.listen(app.get('port'), function () {
   logger.info('Server started, listened on ' + app.get('port') + '.');
   // connect with mongodb.
   mongo.connect(app.get('env'));
