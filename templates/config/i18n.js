@@ -10,7 +10,8 @@ i18n.init({
   lngWhitelist: ['en-us', 'zh-cn'],
   resGetPath: configDir + "/locales/__lng__/__ns__.json",
   ns: {namespaces: ['ns.special'], defaultNs: 'ns.special'},
-  debug: true,
+  // You cloud set debug true to see the output.
+  debug: false,
   lowerCaseLng: true,
   fallbackLng: ['en-us'],
   useCookie: false,
